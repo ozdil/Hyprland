@@ -1617,8 +1617,11 @@ I18n::CI18nEngine::CI18nEngine() {
 
     registerEntry("tr_TR", TXT_KEY_PERMISSION_REQUEST_UNKNOWN, "Bir uygulama <b>{app}</b> bilinmeyen bir izin istiyor.");
     registerEntry("tr_TR", TXT_KEY_PERMISSION_REQUEST_SCREENCOPY, "Bir uygulama <b>{app}</b> ekran kaydı yapmaya çalışıyor.\n\nİzin vermek istiyor musun?");
+    registerEntry("tr_TR", TXT_KEY_PERMISSION_REQUEST_CURSOR_POS, "Bir uygulama <b>{app}</b> imleç konumunuzu yakalamaya çalışıyor.\n\nBuna izin vermek istiyor musunuz?");
     registerEntry("tr_TR", TXT_KEY_PERMISSION_REQUEST_PLUGIN, "Bir uygulama <b>{app}</b> bir eklenti kurmaya çalışıyor: <b>{plugin}</b>.\n\nİzin vermek istiyor musun?");
     registerEntry("tr_TR", TXT_KEY_PERMISSION_REQUEST_KEYBOARD, "Yeni bir klavye algılandı: <b>{keyboard}</b>.\n\nÇalışmasına izin vermek istiyor musun?");
+    registerEntry("tr_TR", TXT_KEY_PERMISSION_REQUEST_INPUT_CAPTURE,
+                  "Bir uygulama <b>{app}</b> girdilerinizi yakalamaya çalışıyor.\n\nBuna izin vermek istiyor musunuz?");
     registerEntry("tr_TR", TXT_KEY_PERMISSION_UNKNOWN_NAME, "(bilinmiyor)");
     registerEntry("tr_TR", TXT_KEY_PERMISSION_TITLE, "İzin isteği");
     registerEntry("tr_TR", TXT_KEY_PERMISSION_PERSISTENCE_HINT, "İpucu: Hyprland config dosyasında bunlar için kalıcı kurallar atayabilirsin.");
@@ -1642,6 +1645,20 @@ I18n::CI18nEngine::CI18nEngine() {
     registerEntry("tr_TR", TXT_KEY_NOTIF_FAILED_TO_LOAD_PLUGIN, "{name} plugini yüklenemedi: {error}");
     registerEntry("tr_TR", TXT_KEY_NOTIF_CM_RELOAD_FAILED, "CM shader yeniden yüklemesi başarısız, rgba/rgbx'e geri dönülüyor.");
     registerEntry("tr_TR", TXT_KEY_NOTIF_WIDE_COLOR_NOT_10B, "Monitör {name}: wide color gamut etkinleştirildi ama ekran 10-bit modunda değil.");
+    registerEntry("tr_TR", TXT_KEY_NOTIF_NO_WATCHDOG, "Hyprland 'start-hyprland' olmadan başlatıldı. Hata ayıklama ortamında değilseniz bu kesinlikle önerilmez.");
+    registerEntry("tr_TR", TXT_KEY_NOTIF_DEPRECATED_CONFIG_OPTS, [](const Hyprutils::I18n::translationVarMap& vars) {
+        return "{count} adet kullanımdan kaldırılmış yapılandırma seçeneği kullanıyorsunuz. Daha fazla bilgi için 'hyprctl deprecated-config' komutunu çalıştırın.";
+    });
+    registerEntry("tr_TR", TXT_KEY_NOTIF_NO_FP16, "Grafik işlemciniz FP16 arabelleklerine işlemeyi desteklemiyor, bazı efektler ve renk yönetimi ayarları kullanılamayabilir.");
+
+    registerEntry("tr_TR", TXT_KEY_SAFE_MODE_TITLE, "Güvenli Mod");
+    registerEntry("tr_TR", TXT_KEY_SAFE_MODE_DESCRIPTION,
+                  "Hyprland güvenli modda başlatıldı; bu durum son oturumunuzun çöktüğü anlamına gelir.\nGüvenli mod yapılandırmanızın yüklenmesini engeller. Bu ortamda "
+                  "sorunları giderebilir veya aşağıdaki düğmeyle yapılandırmanızı yükleyebilirsiniz.\nVarsayılan kısayollar geçerlidir: kitty için SUPER+Q, temel "
+                  "başlatıcı için SUPER+R, çıkış için SUPER+M.\nHyprland'i yeniden başlatmak normal modda açılmasını sağlayacaktır.");
+    registerEntry("tr_TR", TXT_KEY_SAFE_MODE_BUTTON_LOAD_CONFIG, "Yapılandırmayı yükle");
+    registerEntry("tr_TR", TXT_KEY_SAFE_MODE_BUTTON_OPEN_CRASH_REPORT_DIR, "Çökme raporu dizinini aç");
+    registerEntry("tr_TR", TXT_KEY_SAFE_MODE_BUTTON_UNDERSTOOD, "Tamam, bunu kapat");
 
     // tt_RU (Tatar)
     registerEntry("tt_RU", TXT_KEY_ANR_TITLE, "Программа җавап бирми");
